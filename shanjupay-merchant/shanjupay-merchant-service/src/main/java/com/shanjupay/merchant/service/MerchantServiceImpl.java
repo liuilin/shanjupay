@@ -2,12 +2,13 @@ package com.shanjupay.merchant.service;
 
 import com.shanjupay.merchant.api.MerchantService;
 import com.shanjupay.merchant.api.dto.MerchantDTO;
+import com.shanjupay.merchant.convert.MerchantConvert;
 import com.shanjupay.merchant.entity.Merchant;
 import com.shanjupay.merchant.mapper.MerchantMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * Created by Administrator.
+ * Created by liuqiang.
  */
 @org.apache.dubbo.config.annotation.Service
 public class MerchantServiceImpl implements MerchantService {
@@ -18,10 +19,9 @@ public class MerchantServiceImpl implements MerchantService {
     @Override
     public MerchantDTO queryMerchantById(Long id) {
         Merchant merchant = merchantMapper.selectById(id);
-        MerchantDTO merchantDTO = new MerchantDTO();
-        merchantDTO.setId(merchant.getId());
-        merchantDTO.setMerchantName(merchant.getMerchantName());
-        //....
-        return merchantDTO;
+//        MerchantDTO merchantDTO = new MerchantDTO();
+//        merchantDTO.setId(merchant.getId());
+//        merchantDTO.setMerchantName(merchant.getMerchantName());
+        return MerchantConvert.INSTANCE.merchantToMerchantDTO(merchant);
     }
 }

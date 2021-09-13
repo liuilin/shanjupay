@@ -24,9 +24,7 @@ public class MerchantController {
     @ApiOperation(value = "根据id查询商户信息")
     @GetMapping("/merchants/{id}")
     public MerchantDTO queryMerchantById(@PathVariable("id") Long id) {
-
-        MerchantDTO merchantDTO = merchantService.queryMerchantById(id);
-        return merchantDTO;
+        return merchantService.queryMerchantById(id);
     }
 
     @ApiOperation("测试")

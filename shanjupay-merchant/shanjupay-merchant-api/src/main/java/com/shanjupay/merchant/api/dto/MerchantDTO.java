@@ -50,7 +50,7 @@ public class MerchantDTO implements Serializable {
     @ApiModelProperty("联系人地址")
     private String contactsAddress;
 
-    @ApiModelProperty("审核状态,0-未申请,1-已申请待审核,2-审核通过,3-审核拒绝")
+    @ApiModelProperty("审核状态，0 - 未申请，1 - 已申请待审核，2 - 审核通过，3 - 审核拒绝")
     private String auditStatus;
 
     @ApiModelProperty("租户ID")
