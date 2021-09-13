@@ -10,8 +10,8 @@ import java.io.Serializable;
  * @author liuqiang
  * @version 1.0
  **/
-@ApiModel(value = "MerchantDTO", description = "商户信息")
 @Data
+@ApiModel(value = "MerchantDTO", description = "商户信息")
 public class MerchantDTO implements Serializable {
 
     @ApiModelProperty("商户id")
