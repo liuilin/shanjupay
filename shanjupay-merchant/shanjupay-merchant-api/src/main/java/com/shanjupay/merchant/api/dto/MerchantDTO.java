@@ -7,6 +7,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
+ * 商户
  * @author liuqiang
  * @version 1.0
  **/
